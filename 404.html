@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>We'll Be Right Back</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f4f4f4;
+      color: #333;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      padding: 2rem;
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #006a4e;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+    }
+
+    .whatsapp-btn:focus {
+      outline: none;
+    }
+
+    .emoji {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="emoji">🛠️</div>
+    <h1>We'll Be Right Back!</h1>
+    <p>We're doing a quick update or fixing something important.<br>
+    In the meantime, feel free to reach out on WhatsApp.</p>
+    <a class="whatsapp-btn" id="whatsapp-link" target="_blank">
+      Chat on WhatsApp
+    </a>
+  </div>
+
+  <script>
+    const code = '9184479';
+    const tail = '18067';
+    const link = `https://wa.me/${code + tail}`;
+    document.getElementById('whatsapp-link').href = link;
+  </script>
+</body>
+</html>
